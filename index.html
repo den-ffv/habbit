@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>treacer</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="aside">
+        <div>
+          <img class="logo" src="./img/logo.svg" alt="logo" />
+        </div>
+        <div class="aside__icon"></div>
+        <div>
+          <button class="add-tast" onclick="openAndCloas()">
+            <img src="./img/add.svg" alt="add" />
+          </button>
+        </div>
+      </aside>
+      <main class="main">
+        <section class="section-header">
+          <div class="header-content">
+            <h1 class="title">-</h1>
+            <div class="progres-bar">
+              <div class="progres-bar__header">
+                <p class="progres-bar__text">Progres</p>
+                <p class="progres-bar__prosent">-%</p>
+              </div>
+              <div class="progres-bar__line">
+                <div class="progres-bar__line-blue"></div>
+                <div class="progres-bar__line-none"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-content"></section>
+        <section class="section-content">
+          <div class="task">
+            <p class="task__day">Day 2</p>
+            <div class="task__content">
+              <form action="" onsubmit="addDays(event)">
+                <input
+                  name="comment"
+                  class="task__commentary input"
+                  type="text"
+                  placeholder="Commentary"
+                />
+                <button class="task__done" type="submit">Done</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="blure">
+        <div class="pop-up">
+          <div class="pop-up__header">
+            <button class="cloase" onclick="openAndCloas()">
+              <img src="./img/shape.svg" alt="" />
+            </button>
+            <h2 class="pop-up__title">A new habit</h2>
+            <p class="pop-up__text">Icon</p>
+            <div class="pop-up__icon">
+              <div class="icon">
+                <button class="button-icon button-icon--activ " onclick="setIcon(this ,'dumbbell')">
+                  <img src="./img/dumbbell.svg" alt="dumbbell" />
+                </button>
+                <button class="button-icon" onclick="setIcon(this ,'water')">
+                  <img src="./img/water.svg" alt="water" />
+                </button>
+                <button class="button-icon" onclick="setIcon(this ,'eat')">
+                  <img src="./img/eat.svg" alt="eat" />
+                </button>
+              </div>
+            </div>
+            <form class="popup-form" action="" onsubmit="addHaddit(event)">
+              <input
+                class="pop-up__name-hadit input"
+                type="text"
+                placeholder="Name"
+                name="name"
+              />
+              <input
+                class="pop-up__name-hadit input"
+                type="text"
+                hidden
+                value="dumbbell "
+                placeholder="Icon"
+                name="icon"
+              />
+              <input
+                class="pop-up-target input"
+                type="number"
+                placeholder="Target"
+                name="target"
+              />
+              <button class="task__done">Добавить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

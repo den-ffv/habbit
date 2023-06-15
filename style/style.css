@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background: #f3f6fd;
+}
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.wrapper {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.aside {
+  position: absolute;
+  max-width: 123px;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fbfaff;
+}
+.logo {
+  margin: 0px 0px 48px 0px;
+}
+.aside__icon {
+  display: flex;
+  flex-direction: column;
+}
+.aside__button-icon {
+  background: #ffffff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 0px 0px 25px 0px;
+  transition: 0.5s;
+}
+
+.aside__button-icon:hover {
+  transition: 0.5s;
+  background: #d8d8d9;
+}
+.aside__button-icon--activ {
+  background: #d5d5d6;
+}
+
+
+.add-tast {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #000000;
+  background: transparent;
+  transition: 0.5s;
+}
+.add-tast:hover {
+  transition: 0.5s;
+  background: #7a95ff;
+}
+.add-tast img {
+  margin: 3px 0px 0px 0px;
+}
+
+.main {
+  padding: 45px 0 0 173px;
+}
+.section-header {
+  width: 812px;
+  margin: 0px 0px 36px 0px;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  color: #000000;
+}
+.progres-bar {
+  width: 235px;
+}
+.progres-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px 12px 0px;
+}
+.progres-bar__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #232360;
+}
+.progres-bar__prosent {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  color: #768396;
+}
+.progres-bar__line {
+  width: 235px;
+  position: relative;
+}
+.progres-bar__line-blue {
+  position: absolute;
+  transition: all 0.6s;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #000000;
+  z-index: 1;
+}
+.progres-bar__line-none {
+  width: 235px;
+  height: 5px;
+  width: 100%;
+  background: #e6e9ed;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section-content {
+}
+
+.task {
+  width: 816px;
+  margin: 0px 0px 12px 0px;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+}
+.task__day {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  padding: 16px 40px;
+  border-right: 1px solid #000000;
+}
+.task__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task__text {
+  font-size: 16px;
+  line-height: 18px;
+  color: #23235f;
+  margin: 0px 0px 0px 24px;
+}
+.input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "JetBrains Mono", monospace;
+  border: 1px solid #000000;
+  margin: 0px 17px 0px 17px;
+  padding: 0px 0px 0px 20px;
+  height: 39px;
+  width: 525px;
+}
+.input.error {
+  border: 1px solid #ff0000;
+}
+.task__commentary {
+  background: url(../img/commentary.svg) no-repeat 20px 10px;
+  padding: 0px 0px 0px 50px;
+}
+.task__delete {
+  position: absolute;
+  transition: 0.5s;
+  right: 13px;
+}
+.task__delete:hover {
+  transition: 0.5s;
+  padding: 5px;
+  border-radius: 10px;
+  background: #edecfe;
+}
+.task__done {
+  width: 120px;
+  height: 39px;
+  background: #000000;
+  font-size: 13px;
+  line-height: 14px;
+  color: #ffffff;
+  transition: 0.5s;
+}
+.task__done:hover {
+  background: #4e4e4f;
+  transition: 0.5s;
+}
+
+/* ===== pop up =========== */
+
+.pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  padding: 22px 20px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+.blure {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background: #5c5b5b53;
+}
+/* .blure-active {
+  display: block;
+} */
+.pop-up--active {
+  display: block;
+}
+.pop-up__header {
+}
+.pop-up__title {
+  margin: 0px 0px 19px 0px;
+}
+.pop-up__text {
+}
+.pop-up__icon {
+}
+.pop-up__name-hadit {
+}
+.pop-up-target {
+  margin: 10px 0px 20px 0px;
+}
+.icon {
+  margin: 10px 0px 20px 0px;
+}
+.button-icon {
+  background: #ffffff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 0px 0px 25px 0px;
+  transition: 0.5s;
+
+}
+.button-icon:hover {
+  background: #d8d8d9;
+  transition: 0.5s;
+}
+
+.button-icon--activ {
+  background: #d8d8d9;
+  transition: 0.5s;
+}
+.button-icon--activ img {
+
+  transition: 0.5s;
+}
+.cloase {
+  position: absolute;
+  right: 20px;
+}
